@@ -1,2 +1,2 @@
 #!/bin/bash
-if [ "$(stat -c %U hello | tr -d '[:space:]')" = "guillaume" ]; then sudo chown betty hello; fi
+if [ "$(stat -c %U hello | tr -d '[:space:]')" = "guillaume" ] then sudo chown betty hello fi
