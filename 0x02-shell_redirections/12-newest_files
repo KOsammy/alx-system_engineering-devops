@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lt | head -n 11 | xargs -I {} sh -c 'echo {}' _
+ls -t | head -n 10
