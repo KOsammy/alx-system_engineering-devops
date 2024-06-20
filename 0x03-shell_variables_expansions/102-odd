@@ -1,2 +1,2 @@
 #!/bin/bash
-paste -d '\n' <(head -n $(($(wc -l < "$1") / 2)) "$1") <(tail -n $(($(wc -l < "$1") / 2)) "$1" | head -n -1
+while read -r line do ((count++ % 2 == 0)) || echo "$line" done
