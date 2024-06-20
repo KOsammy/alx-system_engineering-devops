@@ -1,2 +1,2 @@
 #!/bin/bash
-cat -n "$1" | grep "$ODDRE" | cut -b 8- > oddfile.$$
+paste -d '\n' <(head -n $(($(wc -l < "$1") / 2)) "$1") <(tail -n $(($(wc -l < "$1") / 2)) "$1" | head -n -1
