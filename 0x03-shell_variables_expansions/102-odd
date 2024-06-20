@@ -1,2 +1,2 @@
 #!/bin/bash
-while read -r line do ((count++ % 2 == 0)) || echo "$line" done
+grep -n '^' "$1" | grep -E '^[[:digit:]]*[02468]:' | cut -d: -f2-
