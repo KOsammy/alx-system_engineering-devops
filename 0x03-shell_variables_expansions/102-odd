@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(ls)
+echo $(ls) | xargs -n1 | grep -n '^' | grep -E '^[13579]:' | cut -d: -f2- | xargs -n1
